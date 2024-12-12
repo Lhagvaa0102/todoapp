@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./todoapp.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container_button">
+        <button id="addTask">Add Task</button>
+      </div>
+      <div class="container_box">
+        <div class="box">
+          <div class="card_title">
+            <div class="card_title_left">
+              <div class="circle color_1"></div>
+              <div class="card_title_text">To Do</div>
+            </div>
+            <div id="todo_count" class="title_counter"></div>
+          </div>
+          <div class="task_container" id="todo_task_container"></div>
+        </div>
+        <div class="box">
+          <div class="card_title">
+            <div class="card_title_left">
+              <div class="circle color_2"></div>
+              <div class="card_title_text">In Progress</div>
+            </div>
+            <div id="inprogress_count" class="title_counter"></div>
+          </div>
+          <div class="task_container" id="inprogress_task_container"></div>
+        </div>
+        <div class="box">
+          <div class="card_title">
+            <div class="card_title_left">
+              <div class="circle color_3"></div>
+              <div class="card_title_text">Done</div>
+            </div>
+            <div id="done_count" class="title_counter"></div>
+          </div>
+          <div class="task_container" id="done_task_container"></div>
+        </div>
+
+        <div class="box">
+          <div class="card_title">
+            <div class="card_title_left">
+              <div class="circle color_4"></div>
+              <div class="card_title_text">Blocked</div>
+            </div>
+            <div id="block_count" class="title_counter"></div>
+          </div>
+          <div class="task_container" id="blocked_task_container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog_container">
+      <div class="dialog">
+        <div class="dialog_mid">
+          <p class="dialog_text">Enter task</p>
+          <input
+            class="dialog_input"
+            id="input_element"
+            type="text"
+            placeholder="Task name..."
+          />
+          <select name="" id="select_status">
+            <option disabled selected hidden value="">Select status</option>
+            <option value="todo">Todo</option>
+            <option value="inProgress">inProgress</option>
+            <option value="done">Done</option>
+            <option value="blocked">blocked</option>
+          </select>
+        </div>
+        <button id="dialog_button">Submit</button>
+      </div>
+    </div>
+    <script src="./todoapp.js"></script>
+  </body>
+</html>
